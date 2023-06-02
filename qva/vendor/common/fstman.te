@@ -31,9 +31,6 @@ type vendor_fstman_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_fstman)
 net_domain(vendor_fstman)
 
-#use bypass because net_admin capability is needed
-hal_server_domain_bypass(vendor_fstman, vendor_hal_fstman)
-
 #allows calls between client and server and vice-versa
 binder_call(vendor_hal_fstman_client, vendor_hal_fstman_server)
 binder_call(vendor_hal_fstman_server, vendor_hal_fstman_client)
@@ -78,5 +75,3 @@ allow vendor_fstman vendor_wigig_vendor_wpa_socket:sock_file rw_file_perms;
 # hostapd global socket
 allow vendor_fstman hostapd_data_file:dir rw_dir_perms;
 allow vendor_fstman hostapd_data_file:sock_file create_file_perms;
-# access capability config store
-hal_client_domain(vendor_fstman, vendor_hal_capabilityconfigstore_qti);

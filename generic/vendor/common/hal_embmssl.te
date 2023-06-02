@@ -29,7 +29,6 @@ type vendor_hal_embmssl_qti, domain;
 type vendor_hal_embmssl_qti_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(vendor_hal_embmssl_qti)
-hal_server_domain(vendor_hal_embmssl_qti, vendor_hal_embmssl)
 
 # Allow hwbinder call from hal client to server
 binder_call(vendor_hal_embmssl_client, vendor_hal_embmssl_server)

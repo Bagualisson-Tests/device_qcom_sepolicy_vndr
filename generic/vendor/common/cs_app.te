@@ -58,3 +58,7 @@ hal_client_domain(vendor_cs_app, vendor_hal_perf)
 
 allow vendor_cs_app vendor_mlid_socket:sock_file write;
 allow vendor_cs_app vendor_ssgtzd_socket:sock_file write;
+
+attribute vendor_hal_imsfactory;
+attribute vendor_hal_imsfactory_client;
+attribute vendor_hal_imsfactory_server;

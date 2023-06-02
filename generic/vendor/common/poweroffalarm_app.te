@@ -30,8 +30,5 @@ app_domain(vendor_poweroffalarm_app);
 
 allow vendor_poweroffalarm_app app_api_service:service_manager find;
 
-hal_client_domain(vendor_poweroffalarm_app, vendor_hal_alarm_qti);
-hal_client_domain(vendor_poweroffalarm_app, vendor_hal_perf);
-
 binder_call(vendor_poweroffalarm_app, vendor_hal_alarm_qti_default);
 

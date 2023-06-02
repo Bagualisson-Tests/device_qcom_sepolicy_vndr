@@ -31,7 +31,6 @@ type wificfrsvc, domain;
 type wificfrsvc_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(wificfrsvc)
-hal_server_domain(wificfrsvc, hal_wificfr)
 
 #allows calls between client and server and vice-versa
 binder_call(hal_wificfr_client, hal_wificfr_server)

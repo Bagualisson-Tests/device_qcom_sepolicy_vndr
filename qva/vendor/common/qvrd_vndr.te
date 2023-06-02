@@ -65,7 +65,6 @@ typeattribute vendor_qvrd_vndr hal_camera_client;
 
 init_daemon_domain(vendor_qvrd_vndr)
 
-hal_server_domain(vendor_qvrd_vndr, vendor_hal_qvrservice_qti)
 binder_call(vendor_hal_qvrservice_qti_client, vendor_hal_qvrservice_qti_server)
 binder_call(vendor_hal_qvrservice_qti_server, vendor_hal_qvrservice_qti_client)
 

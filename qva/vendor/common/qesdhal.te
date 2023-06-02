@@ -30,9 +30,6 @@ type vendor_hal_qesdhal_default_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(vendor_hal_qesdhal_default)
 
-hal_server_domain(vendor_hal_qesdhal_default, vendor_hal_qesdhal)
-hal_client_domain(vendor_hal_qesdhal_default, hal_allocator)
-
 binder_call(vendor_hal_qesdhal_client, vendor_hal_qesdhal_server)
 binder_call(vendor_hal_qesdhal_server, vendor_hal_qesdhal_client)
 

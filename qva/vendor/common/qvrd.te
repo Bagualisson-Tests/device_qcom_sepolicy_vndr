@@ -49,9 +49,6 @@ allow vendor_qvrd vendor_sysfs_graphics:file rw_file_perms;
 #
 # Camera
 #
-
-hal_client_domain(vendor_qvrd, hal_camera);
-
 # Allow access to camera HAL and UVC nodes
 allow vendor_qvrd device:dir r_dir_perms;
 allow vendor_qvrd { gpu_device video_device camera_device sensors_device }:chr_file r_file_perms;
@@ -61,10 +58,7 @@ allow vendor_qvrd { gpu_device video_device camera_device sensors_device }:chr_f
 # Perfd
 #
 
-hal_client_domain(vendor_qvrd, vendor_hal_perf)
-
 allow vendor_qvrd fwk_sensor_hwservice:hwservice_manager find;
-hal_client_domain(vendor_qvrd, hal_sensors)
 
 # QVRD
 userdebug_or_eng(`

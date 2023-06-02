@@ -30,8 +30,6 @@ type vendor_scve_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(vendor_scve)
 
-hal_server_domain(vendor_scve, vendor_hal_scve)
-
 add_hwservice(vendor_hal_scve_server, vendor_hal_scve_hwservice)
 
 allow vendor_hal_scve_client vendor_hal_scve_hwservice:hwservice_manager find;

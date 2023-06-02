@@ -29,7 +29,6 @@ type vendor_hal_seccam_qti, domain;
 
 type vendor_hal_seccam_qti_exec, exec_type, file_type, vendor_file_type;
 init_daemon_domain(vendor_hal_seccam_qti)
-hal_server_domain(vendor_hal_seccam_qti, vendor_hal_seccam)
 
 binder_call(vendor_hal_seccam_client, vendor_hal_seccam_server)
 binder_call(vendor_hal_seccam_server, vendor_hal_seccam_client)

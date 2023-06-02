@@ -34,7 +34,6 @@ init_daemon_domain(vendor_sxrhalservice_qti)
 
 #Allow sxrhalservice to use Vendor Binder IPC
 vndbinder_use(vendor_hal_sxrservice_qti)
-hal_server_domain(vendor_sxrhalservice_qti,vendor_hal_sxrservice_qti)
 
 # Allow hwbinder call from hal client to server
 binder_call(vendor_hal_sxrservice_qti_client, vendor_hal_sxrservice_qti_server)

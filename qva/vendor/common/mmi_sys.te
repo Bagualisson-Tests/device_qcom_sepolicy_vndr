@@ -28,8 +28,6 @@
 #mmi_sys basic
 r_dir_file(vendor_mmi_sys, vendor_sysfs_graphics)
 
-hal_client_domain(vendor_mmi_sys, vendor_hal_factory_qti);
-
 #diag
 userdebug_or_eng(`
     diag_use(vendor_mmi_sys)

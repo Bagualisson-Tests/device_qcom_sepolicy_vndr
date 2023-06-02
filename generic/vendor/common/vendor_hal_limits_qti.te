@@ -26,7 +26,6 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 type vendor_hal_limits_qti, domain;
-hal_server_domain(vendor_hal_limits_qti, vendor_hal_limits)
 
 # Allow hwbinder call from hal client to server and vice-versa
 binder_call(vendor_hal_limits_client, vendor_hal_limits_server)

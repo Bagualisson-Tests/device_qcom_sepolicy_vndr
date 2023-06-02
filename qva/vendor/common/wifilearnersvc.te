@@ -29,7 +29,6 @@ type vendor_wifilearnersvc, domain;
 type vendor_wifilearnersvc_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(vendor_wifilearnersvc)
-hal_server_domain(vendor_wifilearnersvc, vendor_hal_wifilearner)
 
 #allows calls between client and server and vice-versa
 binder_call(vendor_hal_wifilearner_client, vendor_hal_wifilearner_server)

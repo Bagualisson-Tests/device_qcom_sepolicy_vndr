@@ -26,7 +26,6 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 type vendor_hal_esepowermanager_qti, domain;
-hal_server_domain(vendor_hal_esepowermanager_qti, vendor_hal_esepowermanager)
 
 type vendor_hal_esepowermanager_qti_exec, exec_type, file_type, vendor_file_type;
 init_daemon_domain(vendor_hal_esepowermanager_qti)

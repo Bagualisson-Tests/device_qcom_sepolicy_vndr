@@ -32,9 +32,6 @@ type vendor_psiservice_exec, exec_type, vendor_file_type, file_type;
 # Started by init
 init_daemon_domain(vendor_psiservice)
 
-# Allow PSI Service to be a client of PASR HAL
-hal_client_domain(vendor_psiservice, vendor_hal_mem_pasrmanager)
-
 # Read /proc/zoneinfo
 allow vendor_psiservice proc_zoneinfo:file r_file_perms;
 

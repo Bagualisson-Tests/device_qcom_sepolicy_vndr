@@ -30,8 +30,6 @@ type vendor_cvp_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(vendor_cvp)
 
-hal_server_domain(vendor_cvp, vendor_hal_cvp)
-
 add_hwservice(vendor_hal_cvp_server, vendor_hal_cvp_hwservice)
 
 allow vendor_hal_cvp_client vendor_hal_cvp_hwservice:hwservice_manager find;

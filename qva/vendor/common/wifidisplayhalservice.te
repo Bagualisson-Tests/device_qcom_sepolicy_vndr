@@ -38,8 +38,6 @@ net_domain(vendor_wifidisplayhalservice_qti)
 #Allow wifidisplayhalservice to use Vendor Binder IPC
 vndbinder_use(vendor_wifidisplayhalservice)
 
-hal_server_domain_bypass(vendor_wifidisplayhalservice_qti,vendor_wifidisplayhalservice)
-
 # Allow hwbinder call from hal client to server
 binder_call(vendor_wifidisplayhalservice_client, vendor_wifidisplayhalservice_server)
 binder_call(vendor_wifidisplayhalservice_server, vendor_wifidisplayhalservice_client)

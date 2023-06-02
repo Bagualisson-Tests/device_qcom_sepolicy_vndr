@@ -26,3 +26,4 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 dontaudit crash_dump audio_device:dir search;
+type vendor_dataservice_app, domain;

@@ -26,7 +26,6 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 type vendor_hal_iop_default, domain, mlstrustedsubject;
-hal_server_domain(vendor_hal_iop_default, vendor_hal_iop)
 
 type vendor_hal_iop_default_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_hal_iop_default)

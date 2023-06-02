@@ -26,12 +26,10 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 type vendor_sxrd_vndr, domain;
-typeattribute vendor_sxrd_vndr vendor_sys_sxrauxservice_qti_socket_client;
 type vendor_sxrd_vndr_exec, vendor_file_type, exec_type, file_type;
 
 init_daemon_domain(vendor_sxrd_vndr)
 
-hal_server_domain_bypass(vendor_sxrd_vndr, vendor_hal_sxrservice_qti)
 binder_call(vendor_hal_sxrservice_qti_client, vendor_hal_sxrservice_qti_server)
 binder_call(vendor_hal_sxrservice_qti_server, vendor_hal_sxrservice_qti_client)
 

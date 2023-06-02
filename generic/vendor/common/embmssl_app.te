@@ -34,5 +34,3 @@ unix_socket_connect(vendor_embmssl_app, vendor_dpmtcm, vendor_dpmd)
 allow vendor_embmssl_app { app_api_service radio_service }:service_manager find;
 
 #allow embmssl app to access embmssl hal
-hal_client_domain(vendor_embmssl_app, vendor_hal_embmssl);
-hal_client_domain(vendor_embmssl_app, vendor_hal_perf);

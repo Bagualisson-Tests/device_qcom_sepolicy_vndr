@@ -26,29 +26,11 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-#allow system_app access factory
-hal_client_domain(system_app, vendor_hal_factory_qti);
-
-#allow system_app access sensorscalibration service
-hal_client_domain(system_app, vendor_hal_sensorscalibrate_qti);
-
 #perf
 hal_client_domain(system_app, vendor_hal_perf)
-
-#allow system_app to interact with soter hal
-hal_client_domain(system_app, vendor_hal_soter);
-
-#allow system app access display color for qdcm
-hal_client_domain(system_app, vendor_hal_display_color);
 
 # allow system_app to interact with light hal
 hal_client_domain(system_app, hal_light);
 
 # update engine
 binder_call( system_app, update_engine )
-
-#allow system app to access hal_qspmhal
-hal_client_domain(system_app, vendor_hal_qspmhal);
-
-# allow system_app to interact with pasr hal
-hal_client_domain(system_app, vendor_hal_pasrmanager)
