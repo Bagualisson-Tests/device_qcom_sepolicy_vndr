@@ -31,39 +31,3 @@
 type vendor_location_app_test, domain;
 app_domain(vendor_location_app_test)
 
-userdebug_or_eng(`
-    binder_use(vendor_location_app_test)
-    # allow vendor_location_app_test to access perf hal
-    hal_client_domain(vendor_location_app_test, vendor_hal_perf)
-    hal_client_domain(vendor_location_app_test, hal_gnss)
-
-    allow vendor_location_app_test { adbd su }:unix_stream_socket connectto;
-
-    allow vendor_location_app_test app_api_service:service_manager find;
-    allow vendor_location_app_test mediametrics_service:service_manager find;
-
-    allow vendor_location_app_test cgroup:file rw_file_perms;
-
-    allow vendor_location_app_test anr_data_file:dir rw_dir_perms;
-    allow vendor_location_app_test anr_data_file:file rw_file_perms;
-
-    unix_socket_send(vendor_location_app_test, vendor_seempdw, vendor_seempd);
-    #loc api access from ODLT
-    allow vendor_location_app_test self:qipcrtr_socket create_socket_perms_no_ioctl;
-
-    allow vendor_location_app_test audioserver_service:service_manager find;
-
-    allow vendor_location_app_test vendor_sysfs_kgsl:file r_file_perms;
-
-    binder_call(vendor_location_app_test, gpuservice);
-
-    allow vendor_location_app_test vendor_sysfs_kgsl_gpu_model:file r_file_perms;
-
-    hal_client_domain(vendor_location_app_test, vendor_hal_qspmhal);
-
-    hal_client_domain(vendor_location_app_test, vendor_hal_diaghal);
-
-    dontaudit vendor_location_app_test vendor_hal_qspmhal_default:binder {call};
-
-    dontaudit vendor_location_app_test vendor-qti-testscripts:binder {call};
-')

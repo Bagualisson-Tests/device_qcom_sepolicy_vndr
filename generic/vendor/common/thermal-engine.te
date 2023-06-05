@@ -59,10 +59,6 @@ qmux_socket(vendor_thermal-engine);
 #This is to allow access to uio device
 allow vendor_thermal-engine uio_device:chr_file rw_file_perms;
 
-userdebug_or_eng(`
-  diag_use(vendor_thermal-engine)
-')
-
 # To search, read and write kgsl sysfs
 allow vendor_thermal-engine vendor_sysfs_kgsl:dir r_dir_perms;
 allow vendor_thermal-engine vendor_sysfs_kgsl:file rw_file_perms;

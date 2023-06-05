@@ -28,13 +28,3 @@
 #must be defined for file_contexts
 type vendor_smd_test_exec, exec_type, vendor_file_type, file_type;
 
-userdebug_or_eng(`
-  type vendor_smd_test, domain;
-  domain_auto_trans(shell, vendor_smd_test_exec, vendor_smd_test)
-  #domain_auto_trans(adbd, vendor_smd_test_exec, vendor_smd_test)
-  #SMD device node and test file contexts
-  allow vendor_smd_test vendor_smd_device:chr_file {ioctl read write open getattr append};
-  #tests are launched from pseudo terminal, so output will be directed there
-  #and as such needs adequate allow rules
-  allow vendor_smd_test devpts:chr_file {ioctl read write open getattr};
-')

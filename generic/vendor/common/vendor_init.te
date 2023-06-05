@@ -99,9 +99,6 @@ set_prop(vendor_init, vendor_qteeconnector_opti_prop)
 
 #Access vendor bluetooth properties
 set_prop(vendor_init, vendor_bluetooth_prop)
-userdebug_or_eng(`
-  allow vendor_init proc_security:file rw_file_perms;
-')
 
 set_prop(vendor_init,vendor_dcvs_prop)
 

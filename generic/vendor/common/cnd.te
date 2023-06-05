@@ -79,8 +79,3 @@ binder_call(vendor_cnd, vendor_location)
 
 r_dir_file(vendor_cnd, vendor_sysfs_ssr)
 
-#diag
-userdebug_or_eng(`
-    diag_use(vendor_cnd)
-	r_dir_file(vendor_cnd, vendor_sysfs_diag)
-')

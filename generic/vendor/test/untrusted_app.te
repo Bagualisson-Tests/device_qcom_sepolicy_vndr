@@ -26,16 +26,4 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #allow untrusted_app clients to access configuration settings
-userdebug_or_eng(`
-allow untrusted_app vendor_sysfs_kgsl:dir search;
-dontaudit {
-    untrusted_app
-} vendor_sysfs_kgsl:dir read;
-r_dir_file(untrusted_app, vendor_sysfs_kgsl_snapshot);
-r_dir_file(untrusted_app, vendor_gles_data_file);
-allow untrusted_app vendor_gles_data_file:dir rw_dir_perms;
-allow untrusted_app vendor_gles_data_file:file rw_file_perms;
-')
 
-# allow app to be a client of DSP HAL
-hal_client_domain(untrusted_app, vendor_hal_dspmanager)

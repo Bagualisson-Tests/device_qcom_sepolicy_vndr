@@ -76,7 +76,3 @@ get_prop(vendor_cnd, vendor_mwqem_prop)
 #for using public interface vendor.qti.data.factory
 #client should add their domain to vendor_cnd.te
 ##############################################################
-userdebug_or_eng(`
-  binder_call(vendor_cnd, radio)
-  diag_use(vendor_cnd)
-')

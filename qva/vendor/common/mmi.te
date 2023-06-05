@@ -63,7 +63,3 @@ net_domain(vendor_mmi);
 allow vendor_mmi vendor_mmi_exec:file rx_file_perms;
 allow vendor_mmi proc:file r_file_perms;
 
-#diag
-userdebug_or_eng(`
-    diag_use(vendor_mmi)
-')

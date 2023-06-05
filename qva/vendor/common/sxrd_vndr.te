@@ -72,7 +72,3 @@ r_dir_file(vendor_sxrd_vndr, proc_asound);
 #Allow access to ion device
 allow vendor_sxrd_vndr ion_device:chr_file { open read };
 
-#add sxrd to access tombstoned
-userdebug_or_eng(`
-crash_dump_fallback(vendor_sxrd_vndr);
-')

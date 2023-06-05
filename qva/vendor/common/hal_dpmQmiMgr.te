@@ -60,6 +60,3 @@ allowxperm vendor_hal_dpmQmiMgr self:{ socket qipcrtr_socket } ioctl msm_sock_ip
 allow vendor_hal_dpmQmiMgr self:capability net_bind_service;
 allowxperm vendor_hal_dpmQmiMgr self:udp_socket ioctl priv_sock_ioctls;
 
-userdebug_or_eng(`
-    diag_use(vendor_hal_dpmQmiMgr)
-')

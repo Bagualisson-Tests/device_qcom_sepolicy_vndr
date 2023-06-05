@@ -27,6 +27,3 @@
 #
 #
 
-userdebug_or_eng(`
-allow hal_wifi_hostapd vendor_wifi_vendor_log_data_file:dir search;
-')

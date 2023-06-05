@@ -52,12 +52,6 @@ netmgr_socket(vendor_ims_service);
 allowxperm vendor_ims_service self:udp_socket ioctl RMNET_IOCTL_EXTENDED;
 allow vendor_ims_service self:tipc_socket { create_socket_perms_no_ioctl };
 
-#diag
-userdebug_or_eng(`
-    diag_use(vendor_ims_service)
-    binder_call(vendor_ims_service, radio)
-')
-
 set_prop(vendor_ims_service, vendor_ctl_vendor_imsrcsservice_prop)
 
 hwbinder_use(vendor_ims_service)

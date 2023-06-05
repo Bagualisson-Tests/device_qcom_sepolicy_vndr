@@ -29,16 +29,3 @@
 ##
 ## This file defines the permissions that qtidiagservices can carry
 
-userdebug_or_eng(`
-  type qtidiagservices_app, domain;
-  app_domain(qtidiagservices_app)
-
-  hal_client_domain(qtidiagservices_app, vendor_hal_diaghal)
-  hal_client_domain(qtidiagservices_app, vendor_hal_perf)
-
-  allow qtidiagservices_app app_api_service:service_manager find;
-  allow qtidiagservices_app system_app_data_file: dir create_dir_perms;
-  allow qtidiagservices_app system_app_data_file: file create_file_perms;
-
-')
-

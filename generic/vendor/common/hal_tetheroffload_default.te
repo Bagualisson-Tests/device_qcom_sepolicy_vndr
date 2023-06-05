@@ -33,7 +33,3 @@ allow hal_tetheroffload_default vendor_ipa_vendor_data_file:file create_file_per
 
 #add_hwservice(hal_tetheroffload_default, hal_tetheroffload_hwservice)
 
-#diag
-userdebug_or_eng(`
-    r_dir_file(hal_tetheroffload_default, vendor_sysfs_diag)
-')

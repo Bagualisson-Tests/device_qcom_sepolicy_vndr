@@ -47,8 +47,3 @@ allow vendor_hostapd hostapd_data_file:sock_file create_file_perms;
 allow vendor_hostapd vendor_wifi_vendor_wpa_socket:dir r_dir_perms;
 allow vendor_hostapd vendor_wifi_vendor_wpa_socket:sock_file rw_file_perms;
 
-#diag
-userdebug_or_eng(`
-    diag_use(vendor_hostapd)
-    unix_socket_send(vendor_hostapd, vendor_wifi_vendor_wpa, su)
-')

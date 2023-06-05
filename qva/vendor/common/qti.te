@@ -28,7 +28,6 @@
 allow vendor_qti {
     vendor_smem_log_device
     vendor_mhi_device
-    userdebug_or_eng(`kmsg_device')
 }:chr_file rw_file_perms;
 
 allow vendor_qti self:{
@@ -42,7 +41,4 @@ allowxperm vendor_qti self:udp_socket ioctl priv_sock_ioctls;
 allow vendor_qti vendor_shell_exec:file rx_file_perms;
 
 # Allow write permissions for log file
-userdebug_or_eng(`
-    allow vendor_qti vendor_qti_data_file:file create_file_perms;
-')
 dontaudit vendor_qti vendor_shell_exec:file x_file_perms;

@@ -43,5 +43,3 @@ hal_attribute_hwservice(vendor_hal_qspmhal, vendor_hal_qspmhal_hwservice)
 allow vendor_hal_qspmhal_default vendor_qspmhal_data_file:file  create_file_perms;
 allow vendor_hal_qspmhal_default vendor_qspmhal_data_file:dir rw_dir_perms;
 
-#getprop rule for qspm debug prop
-userdebug_or_eng(`get_prop(vendor_hal_qspmhal_default, vendor_qspm_dbg_prop)')

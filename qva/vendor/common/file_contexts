@@ -222,12 +222,8 @@
 /mnt/vendor/persist/secnvm(/.*)?      u:object_r:vendor_persist_secnvm_file:s0
 /mnt/vendor/persist/iar_db(/.*)?      u:object_r:vendor_persist_iar_db_file:s0
 /mnt/vendor/persist/qti_fp(/.*)?      u:object_r:vendor_persist_qti_fp_file:s0
-/mnt/vendor/persist/FTM_AP(/.*)?      u:object_r:vendor_persist_mmi_file:s0
 /mnt/vendor/persist/vpp(/.*)?         u:object_r:vendor_persist_vpp_file:s0
 /mnt/vendor/persist/hvdcp_opti(/.*)?  u:object_r:vendor_persist_hvdcp_file:s0
-
-# spunvm partition
-/mnt/vendor/spunvm(/.*)?              u:object_r:vendor_spunvm_file:s0
 
 # same-process HAL files and their dependencies
 #

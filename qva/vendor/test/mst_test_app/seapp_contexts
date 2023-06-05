@@ -25,18 +25,3 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-user=system seinfo=platform name=com.qualcomm.dsdstesterapp domain=mst_test_app type=system_app_data_file
-
-user=system seinfo=platform name=com.qualcomm.qti.dsdslogger domain=mst_test_app type=system_app_data_file
-
-user=system seinfo=platform name=com.qualcomm.scriptmanager domain=mst_test_app type=system_app_data_file
-
-user=system seinfo=platform name=com.qualcomm.testhelper domain=mst_test_app type=system_app_data_file
-
-user=system seinfo=platform name=com.qualcomm.fst.CrashMonitor domain=mst_test_app type=system_app_data_file
-
-user=system seinfo=platform name=com.qualcomm.fst.STE domain=mst_test_app type=system_app_data_file
-
-user=system seinfo=platform name=com.qualcomm.fst.executor domain=mst_test_app type=system_app_data_file
-
-user=system seinfo=platform name=com.qualcomm.fst.sniffer domain=mst_test_app type=system_app_data_file

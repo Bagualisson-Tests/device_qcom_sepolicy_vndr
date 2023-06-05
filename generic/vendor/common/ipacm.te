@@ -37,11 +37,6 @@ net_domain(vendor_ipacm)
 
 hal_server_domain(vendor_ipacm, hal_tetheroffload)
 
-userdebug_or_eng(`
-    # Allow using the logging file between vendor_ipacm and vendor_ipacm-diag
-    unix_socket_send(vendor_ipacm, vendor_ipacm, vendor_ipacm-diag)
-')
-
 # Allow operations with /dev/ipa, /dev/wwan_ioctl and /dev/ipaNatTable
 allow hal_tetheroffload vendor_ipa_dev:chr_file rw_file_perms;
 

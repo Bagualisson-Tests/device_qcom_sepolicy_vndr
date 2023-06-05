@@ -28,8 +28,5 @@
 # qva/vendor_hal_gnss_qti.te - generic sepolicy rules for qti value added
 # location hidl
 
-userdebug_or_eng(`
-  get_prop(vendor_hal_gnss_qti, vendor_pd_locater_dbg_prop)
-')
 
 allow hal_gnss self:qipcrtr_socket create_socket_perms_no_ioctl;

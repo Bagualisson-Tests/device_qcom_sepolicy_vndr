@@ -54,7 +54,3 @@ r_dir_file(vendor_qfp-daemon, firmware_file)
 r_dir_file(vendor_qfp-daemon, mnt_vendor_file)
 r_dir_file(vendor_qfp-daemon, vendor_persist_qti_fp_file)
 
-#diag
-userdebug_or_eng(`
-    diag_use(vendor_qfp-daemon)
-')

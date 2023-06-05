@@ -41,10 +41,6 @@ allow system_server vendor_sysfs_sensors:file rw_file_perms;
 # allow access to low persistence mode sysfs node
 allow system_server vendor_sysfs_graphics:file rw_file_perms;
 
-userdebug_or_eng(`
-    diag_use(system_server)
-')
-
 #OpenGLES version
 get_prop(system_server, vendor_opengles_prop)
 

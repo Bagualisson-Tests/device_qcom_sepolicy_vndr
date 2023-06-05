@@ -53,11 +53,6 @@ allow vendor_mdm_helper vendor_mdm_helper_exec :file x_file_perms;
 #   to Android user/userdebug config
 allow vendor_mdm_helper vendor_tombstone_data_file:dir r_dir_perms;
 dontaudit vendor_mdm_helper vendor_tombstone_data_file:dir write;
-# Userdebug/eng variant
-userdebug_or_eng(`
-allow vendor_mdm_helper vendor_tombstone_data_file:dir create_dir_perms;
-allow vendor_mdm_helper vendor_tombstone_data_file:file create_file_perms;
-')
 #Ramdump config END
 
 #Needed to kill its own forked process on efs sync

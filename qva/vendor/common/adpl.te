@@ -40,11 +40,6 @@ allow vendor_adpl self:{
 
 set_prop(vendor_adpl, vendor_dataadpl_prop)
 
-#diag
-userdebug_or_eng(`
-    diag_use(vendor_adpl)
-    allow vendor_adpl vendor_sysfs_data:file r_file_perms;
-')
 
 #Allow vendor_adpl to create vendor_adpl socket
 allow vendor_adpl vendor_dataadpl_socket:sock_file rw_file_perms;

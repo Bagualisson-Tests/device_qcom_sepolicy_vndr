@@ -58,7 +58,6 @@ allow vendor_hvdcp {
 }:lnk_file r_file_perms;
 
 allow vendor_hvdcp self:capability2 wake_alarm;
-userdebug_or_eng(`allow vendor_hvdcp kmsg_device:chr_file rw_file_perms;')
 allow vendor_hvdcp self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
 
 allow vendor_hvdcp mnt_vendor_file:dir search;

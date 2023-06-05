@@ -28,10 +28,6 @@
 #Define Domain
 type vendor_hal_debugutils_default, domain;
 type vendor_hal_debugutils_default_exec, exec_type, vendor_file_type, file_type;
-hal_server_domain(vendor_hal_debugutils_default, vendor_hal_debugutils)
 init_daemon_domain(vendor_hal_debugutils_default)
 
 permissive vendor_hal_debugutils_default;
-binder_call(vendor_hal_debugutils_server, vendor_hal_debugutils_client);
-binder_call(vendor_hal_debugutils_client, vendor_hal_debugutils_server);
-hal_attribute_hwservice(vendor_hal_debugutils,hal_debugutils_hwservice);

@@ -96,16 +96,6 @@ allow vendor_wifidisplayhalservice_qti ion_device:chr_file r_file_perms;
 #Allow /dev/qce file access
 allow vendor_wifidisplayhalservice_qti vendor_qce_device:chr_file rw_file_perms;
 
-userdebug_or_eng(`
-#Allow for property access
-  get_prop(vendor_wifidisplayhalservice_qti,vendor_wfd_vendor_debug_prop)
-#Allow to dump in /data/vendor/media/
-  allow vendor_wifidisplayhalservice_qti vendor_media_data_file:dir w_dir_perms;
-  allow vendor_wifidisplayhalservice_qti vendor_media_data_file:file create_file_perms;
-#Allow to access logmask file in /data/vendor
-  allow vendor_wifidisplayhalservice_qti vendor_data_file:file r_file_perms;
-')
-
 #Allow source to access video SKU and UBWC property(for encoder config)
 get_prop(vendor_wifidisplayhalservice_qti, vendor_video_prop)
 

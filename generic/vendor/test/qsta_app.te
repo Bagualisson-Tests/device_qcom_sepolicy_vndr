@@ -47,9 +47,6 @@ dontaudit vendor_qsta_app gpu_service:service_manager find;
 dontaudit vendor_qsta_app gpuservice:binder call;
 dontaudit vendor_qsta_app vendor_hal_qspmhal_hwservice:hwservice_manager find;
 
-userdebug_or_eng(`
-  allow vendor_qsta_app vendor_diag_device:chr_file { read write open ioctl };
-')
 
 allow vendor_qsta_app mnt_vendor_file:dir r_dir_perms;
 allow vendor_qsta_app system_app_data_file:dir create_dir_perms;

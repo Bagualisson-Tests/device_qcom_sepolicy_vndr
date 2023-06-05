@@ -25,11 +25,6 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-userdebug_or_eng(`
-  domain_auto_trans(shell, vendor_netmgrd_exec, vendor_netmgrd)
-  diag_use(vendor_netmgrd)
-  diag_use(netutils_wrapper)
-')
 
 #Allow vendor_netmgrd operations
 allow vendor_netmgrd vendor_netmgrd:capability {

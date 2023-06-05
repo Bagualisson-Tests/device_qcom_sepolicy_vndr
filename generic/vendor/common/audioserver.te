@@ -29,6 +29,3 @@ binder_call(audioserver, bootanim)
 # audio properties
 get_prop(audioserver, vendor_audio_prop)
 
-userdebug_or_eng(`
-    diag_use(audioserver)
-')
